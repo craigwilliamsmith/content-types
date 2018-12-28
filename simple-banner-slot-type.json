@@ -1,0 +1,33 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://raw.githubusercontent.com/craigwilliamsmith/content-types/master/simple-banner-slot-type.json",
+  "title": "Feature page banner slot",
+  "description": "Slot to contain the feature banner",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "bannerslot": {
+      "title": "Feature page banner",
+      "description": "The banner for the feature page",
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+        },
+        {
+          "properties": {
+            "contentType": {
+              "title": "content",
+              "enum": [
+                "https://raw.githubusercontent.com/craigwilliamsmith/content-types/master/simple-banner-content-type.json"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}
